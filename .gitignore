@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Claude configuration
+.claude/
+
+# Temporary files
+tmp/
+temp/

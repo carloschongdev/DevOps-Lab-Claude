@@ -1,28 +1,20 @@
-Engineering Decisions Log
+Date: 2026-03-31
 
-Purpose
-
-This document records architectural and engineering decisions made during the DevOps Lab.
-
-Decision Format
-
-Date:
-Lab Day:
 Decision:
+Adopt Claude Projects as the primary AI-assisted learning environment for the DevOps Lab.
 
 Context:
-
-Why this decision was made.
+The DevOps Lab requires persistent context across multiple sessions, structured documentation, and the ability to reference project files.
 
 Alternatives considered:
 
-Option A
-Option B
+1. Continue using ChatGPT conversations
+2. Use Claude Projects with structured documentation
 
-Final choice:
+Final Choice:
 
-Chosen approach and justification.
+Claude Projects was selected because it allows attaching project documents, maintaining persistent context, and referencing structured lab materials.
 
 Impact:
 
-How this affects the system architecture.
+Improves consistency of mentorship responses and enables a more structured learning workflow.
