@@ -1,25 +1,20 @@
-# DevOps Lab — Troubleshooting Log
+Date: 2026-04-01
+Lab Day: Setup Phase
 
-This file records issues encountered during the lab.
-
-Format:
-
----
-
-Date:
-Lab Day:
 Issue:
+zsh parse error when running `git remote add origin <repo>`
 
-Error message or logs.
+Error message:
+zsh: parse error near `\n`
 
 Root Cause:
-
-Explanation of what caused the problem.
+The placeholder `<repo>` was interpreted by zsh as input redirection instead of a literal string.
 
 Resolution:
+Replace the placeholder with the actual GitHub repository URL.
 
-Steps used to fix the issue.
+Correct command example:
+git remote add origin https://github.com/carloschongdev/devops-lab-claude.git
 
 Lesson Learned:
-
-Key takeaway to avoid similar problems.
+Angle brackets in documentation are placeholders and should not be typed literally in shell commands.

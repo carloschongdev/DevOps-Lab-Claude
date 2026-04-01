@@ -1,41 +1,17 @@
-DevOps Lab Environment
+# DevOps Lab Environment
 
-Development Machine
-
+## Operating System
 macOS
 
-Terminal
+## Terminal
+Ghostty
 
-bash installed via homebrew
+## Version Control
+Git
 
-Default shell configured with custom prompt
-
-Project Repository
-
+## Repository Hosting
 GitHub
 
-Container Runtime
-
-Docker
-
-CI System
-
-GitHub Actions
-
-Container Structure
-
-docker/
-
-Pipeline File
-
-.github/workflows/pipeline.yml
-
-Testing Strategy
-
-Container health checks using curl
-
-Container logs inspected during CI pipeline
-
-Repository Practices
-
-Annotated git tags used for each lab day
+## AI Tooling
+Claude Projects
+ChatGPT (secondary mentor)
