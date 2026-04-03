@@ -141,3 +141,12 @@ Before proposing any modifications to the repository you MUST:
 4. Only then propose deterministic modifications
 
 Never propose code changes without first reviewing the full file content.
+
+When generating lab tasks you must consult:
+
+docs/devops-lab-quality-gate.md  
+docs/devops-lab-failure-scenarios.md  
+standards/pipeline-standards.md  
+standards/container-standards.md
+
+These documents define the required level of realism for the laboratory.
