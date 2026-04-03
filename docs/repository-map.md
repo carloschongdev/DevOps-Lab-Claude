@@ -67,3 +67,14 @@ This document.
 # notes/
 
 Temporary notes and engineering observations during the lab.
+
+# AI Usage
+
+AI assistants should first read:
+
+1. docs/ai-context-index.md
+2. docs/repository-map.md
+3. docs/lab-progress.md
+4. mentor/claude-devops-mentor-prompt.md
+
+These files provide the necessary context to generate correct instructions.
