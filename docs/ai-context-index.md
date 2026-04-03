@@ -132,3 +132,18 @@ AI assistants interacting with this repository must:
 The DevOps Lab repository itself is separate from this repository.
 
 This repository only contains **guidance, documentation, and mentoring configuration**.
+
+AI assistants should also read:
+
+docs/ai-operating-rules.md
+docs/ai-reading-order.md
+docs/ai-task-generation-rules.md
+
+# AI Session State
+
+The current progress of the DevOps Lab is summarized in:
+
+docs/ai-mentor-state.md
+
+AI assistants should read this file to understand the current
+state of the lab before generating instructions.

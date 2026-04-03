@@ -62,6 +62,9 @@ Records important debugging events.
 repository-map.md
 This document.
 
+ai-operating-rules.md  
+Defines how AI assistants should reason before generating instructions.
+
 ---
 
 # notes/
