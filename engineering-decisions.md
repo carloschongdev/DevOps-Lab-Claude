@@ -1,20 +1,43 @@
-Date: 2026-03-31
+# Engineering Decisions
 
-Decision:
-Adopt Claude Projects as the primary AI-assisted learning environment for the DevOps Lab.
+This document records important decisions made during the DevOps Lab.
 
-Context:
-The DevOps Lab requires persistent context across multiple sessions, structured documentation, and the ability to reference project files.
+---
 
-Alternatives considered:
+# Decision: Separate Documentation Repository
 
-1. Continue using ChatGPT conversations
-2. Use Claude Projects with structured documentation
+Two repositories are used.
 
-Final Choice:
+devops-lab
 
-Claude Projects was selected because it allows attaching project documents, maintaining persistent context, and referencing structured lab materials.
+Contains implementation.
 
-Impact:
+devops-lab-claude
 
-Improves consistency of mentorship responses and enables a more structured learning workflow.
+Contains documentation.
+
+Reason:
+
+Separating documentation from implementation keeps the technical repository clean and focused.
+
+---
+
+# Decision: Use GitHub Actions
+
+GitHub Actions was selected for CI/CD.
+
+Reason:
+
+- native GitHub integration
+- easy pipeline automation
+- widely used in modern DevOps workflows
+
+---
+
+# Decision: Deterministic Pipelines
+
+All pipelines must produce reproducible results.
+
+Reason:
+
+Reproducibility is critical in real DevOps environments.
