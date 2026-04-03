@@ -1,75 +1,91 @@
 # Lab Environment
 
-This document describes the environment used for the DevOps Lab.
+This document describes the environment used to run the DevOps Lab.
 
 ---
 
-## Operating System
+# Operating System
 
 macOS
 
----
-
-## Shell
-
-zsh
+The environment uses Homebrew to install tools.
 
 ---
 
-## Package Manager
+# Core Tools Installed
 
-Homebrew
-
----
-
-## Core Tools Installed
-
-- Git
-- Docker
-- GitHub CLI
-- curl
-- bash
-
----
-
-## Primary Machine
-
-MacBook
-
----
-
-## Repository Structure
-
-Two repositories are used in the lab.
-
-devops-lab
-
-Contains implementation code.
-
-devops-lab-claude
-
-Contains documentation and lab tracking.
-
----
-
-## Container Platform
-
+Git
 Docker
-
-Used for:
-
-- building container images
-- running local tests
-- validating container health
+Docker Compose
+GitHub CLI
+Bash (Homebrew version)
 
 ---
 
-## CI/CD Platform
+# Bash Location
+
+The lab uses Homebrew bash.
+
+However scripts should use:
+
+#!/usr/bin/env bash
+
+This ensures compatibility with Linux environments.
+
+---
+
+# Container Runtime
+
+Docker Desktop
+
+Containers are used to simulate deployment environments.
+
+---
+
+# CI/CD Platform
 
 GitHub Actions
 
-Used for:
+The repository contains a workflow located in:
 
-- building Docker images
-- running pipelines
-- artifact generation
+.github/workflows/pipeline.yml
+
+The pipeline performs:
+
+• Docker image build
+• Container startup
+• Health check
+• Artifact generation
+• Cleanup
+
+---
+
+# Repository Structure
+
+Expected structure:
+
+docs/
+notes/
+scripts/
+.github/workflows/
+
+---
+
+# Local Pipeline
+
+The project includes a local pipeline script:
+
+run-pipeline.sh
+
+This script simulates CI behavior locally.
+
+---
+
+# Future Phases
+
+Later phases will introduce:
+
+Terraform
+Kubernetes
+Monitoring
+Security Scanning
