@@ -43,17 +43,66 @@ This project contains the documentation and operational structure used to run th
 ```
 DevOps-Lab-Claude
 │
-├── devops-lab-rules.md
-├── devops-roadmap.md
-├── lab-execution-protocol.md
-├── lab-progress.md
-├── troubleshooting-log.md
-├── devops-architecture-notes.md
-├── lab-environment.md
-├── engineering-decisions.md
-├── devops-systems-map.md
-├── lab-daily-log.md
-```
+├── CLAUDE.MD
+├── docs
+│   ├── ai
+│   │   ├── ai-context-index.md
+│   │   ├── ai-context-snapshot.md
+│   │   ├── ai-learning-patterns.md
+│   │   ├── ai-mentor-state.md
+│   │   ├── ai-operating-rules.md
+│   │   ├── ai-reading-order.md
+│   │   ├── ai-session-start.md
+│   │   └── ai-task-generation-rules.md
+│   ├── architecture
+│   │   ├── ai-system-architecture.md
+│   │   ├── architecture.md
+│   │   ├── container-design.md
+│   │   ├── devops-system-flow.md
+│   │   ├── pipeline-design.md
+│   │   ├── platform-architecture.md
+│   │   └── repo-architecture.md
+│   ├── devops
+│   │   ├── devops-lab-difficulty-scaling.md
+│   │   ├── devops-lab-failure-scenarios.md
+│   │   ├── devops-lab-objectives.md
+│   │   ├── devops-lab-quality-gate.md
+│   │   ├── devops-lab-rules.md
+│   │   ├── devops-lab-skill-matrix.md
+│   │   ├── devops-roadmap.md
+│   │   ├── devops-system-map.md
+│   │   └── incident-response-playbook.md
+│   ├── lab
+│   │   ├── lab-ai-mentoring-history.md
+│   │   ├── lab-daily-log.md
+│   │   ├── lab-environment.md
+│   │   ├── lab-inteligence.md
+│   │   ├── lab-phase-map.md
+│   │   ├── lab-progress.md
+│   │   └── lab-simulation-engine.md
+│   ├── lab-plan
+│   │   ├── devops-lab-days-26-29.md
+│   │   ├── devops-lab-days-30-39.md
+│   │   ├── devops-lab-days-40-49.md
+│   │   ├── devops-lab-days-50-59.md
+│   │   ├── devops-lab-days-60-69.md
+│   │   ├── devops-lab-days-70-79.md
+│   │   ├── devops-lab-days-80-90.md
+│   │   └── DevOps-Lab-Full-Curriculum.md
+│   ├── repository-map.md
+│   └── troubleshooting-log.md
+├── mentor
+│   ├── claude-devops-mentor-prompt.md
+│   ├── lab-execution-protocol.md
+│   └── lab-rules.md
+├── notes
+│   ├── devops-architecture-notes.md
+│   └── engineering-decisions.md
+├── README.md
+└── standards
+    ├── commit-standards.md
+    ├── container-standards.md
+    └── pipeline-standards.md
 
 ---
 
