@@ -896,7 +896,7 @@ mkdir -p artifacts/day29
 ```
 
 ```id="art4"
-mv * artifacts/day29/
+mv *.zip artifacts/day29/ 2>/dev/null || true
 ```
 
 ---
