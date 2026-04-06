@@ -109,3 +109,47 @@ Tasks should encourage real DevOps practices such as:
 • automation thinking
 
 The goal is to develop engineering habits, not just complete exercises.
+
+## Safe Command Generation Rules
+
+When generating shell commands, the AI must avoid destructive or non-deterministic patterns.
+
+Forbidden patterns:
+
+mv *
+rm *
+cp *
+docker system prune -a
+git reset --hard
+
+Unsafe wildcard operations must never be generated.
+
+Instead the AI must use deterministic patterns such as:
+
+mv *.zip artifacts/
+mv artifact-* artifacts/
+
+Commands must never affect the entire repository unless explicitly required and clearly explained.
+
+All commands must be safe to execute in a learning environment.
+
+## YAML Parsing Rules
+
+When inspecting YAML files the AI must avoid generic patterns that match any key.
+
+Commands such as:
+
+grep "^\s*[a-zA-Z_]*:" file.yml
+
+should not be used because YAML contains many keys that are not relevant.
+
+Instead the AI must target specific sections such as:
+
+jobs
+steps
+uses
+runs-on
+
+Example:
+
+grep -A 10 "^jobs:" .github/workflows/*.yml

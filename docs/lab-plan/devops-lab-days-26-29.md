@@ -180,7 +180,7 @@ mkdir -p artifacts/day26
 ```
 
 ```
-mv * artifacts/day26/
+mv *.zip artifacts/day26/ 2>/dev/null || true
 ```
 
 ---
