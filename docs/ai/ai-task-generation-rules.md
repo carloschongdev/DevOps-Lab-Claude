@@ -397,3 +397,25 @@ Tasks should encourage real DevOps practices such as:
 
 The goal is to develop engineering habits,
 not just complete exercises.
+
+# Widget Format Standard
+
+Lab instructions are delivered as interactive HTML widgets with the following spec:
+
+- Dark terminal background (#1a1a18) with macOS dots
+- Each command element has a distinct color:
+  - $ / echo → #5DCAA5 (teal)
+  - base command → #85B7EB (blue)
+  - subcommand → #ED93B1 (pink)
+  - flag key → #FAC775 (yellow)
+  - flag value → #EF9F27 (orange)
+  - path / file → #AFA9EC (purple)
+  - redirect > → #F0997B (coral)
+  - pipe | → #F4C0D1 (light pink)
+  - string → #97C459 (green)
+  - || operator → #D4537E (rose)
+  - # comment → #5F5E5A (gray)
+- No copy button
+- Steps separated by comments inside one single terminal block
+- Color legend shown once at the top
+- Concept explanation in Spanish first, English second
