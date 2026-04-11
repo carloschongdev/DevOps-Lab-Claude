@@ -4,7 +4,7 @@ Current Status
 
 Completed:
 
-Day 1 – Day 25
+Day 1 – Day 27
 
 Skills Implemented
 
@@ -18,6 +18,14 @@ build metadata generation
 artifact storage
 commit SHA tagging
 deterministic pipeline execution
+GitHub CLI pipeline inspection
+CI run log analysis
+artifact download and verification
+pipeline error identification
+Docker image build comparison
+image layer history inspection
+artifact checksum generation
+build determinism analysis
 
 Current Phase
 
@@ -25,10 +33,10 @@ Phase 4 — CI/CD Hardening
 
 Next Lab Day
 
-Day 26
+Day 28
 
 Focus:
 
-OCI Image Labels
-Image Metadata
-Pipeline traceability
+Pipeline Failure Simulation
+Intentional CI breakage
+Pipeline recovery workflow

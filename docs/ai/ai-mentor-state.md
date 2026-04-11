@@ -11,11 +11,11 @@ AI assistants should read this document before generating new instructions.
 
 # Current Lab Status
 
-Lab Progress Phase: Phase 4 — CI/CD Foundations
+Lab Progress Phase: Phase 4 — CI/CD Hardening
 
-Last Completed Day: Day 25
+Last Completed Day: Day 27
 
-Next Expected Task: Day 26
+Next Expected Task: Day 28
 
 ---
 
@@ -35,6 +35,15 @@ The following milestones have been completed in the DevOps Lab:
 • Container health check validation
 • Artifact generation implemented
 • Pipeline cleanup logic implemented
+- GitHub CLI installed and authenticated
+- CI pipeline runs inspected with gh run list and gh run view
+- Pipeline logs downloaded and analyzed
+- Build artifact downloaded and commit SHA verified
+- Idempotent cleanup pattern identified in pipeline logs
+- Docker image built twice and hashes compared
+- Image layer history inspected with docker history
+- Build non-determinism identified and explained
+- SHA-256 artifact checksum generated
 
 ---
 
@@ -46,10 +55,14 @@ Dockerfile
 GitHub Actions pipeline
 container health check endpoint
 artifact generation script
+reports/day26/ with 10 inspection report files
+reports/day27/ with 11 build comparison report files
+notes/day26-reflection.md
+notes/day27-reflection.md
 
 The CI pipeline successfully builds the container image and performs
-health validation.
-
+health validation. Two local builds have been compared revealing
+expected non-determinism due to image timestamps.
 ---
 
 # Known Constraints
