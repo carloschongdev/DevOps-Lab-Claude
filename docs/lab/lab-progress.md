@@ -4,7 +4,7 @@ Current Status
 
 Completed:
 
-Day 1 – Day 27
+Day 1 – Day 28
 
 Skills Implemented
 
@@ -26,6 +26,15 @@ Docker image build comparison
 image layer history inspection
 artifact checksum generation
 build determinism analysis
+intentional pipeline failure simulation
+pipeline failure log analysis
+pipeline recovery and diff validation
+YAML syntax validation with python3
+Trivy filesystem vulnerability scanning
+Trivy Docker image CVE scanning
+Trivy Dockerfile misconfiguration scanning
+CI cache archive and restore simulation
+gh run view with explicit run ID via shell variable
 
 Current Phase
 
@@ -33,10 +42,11 @@ Phase 4 — CI/CD Hardening
 
 Next Lab Day
 
-Day 28
+Day 29
 
 Focus:
 
-Pipeline Failure Simulation
-Intentional CI breakage
-Pipeline recovery workflow
+Pipeline Recovery Metrics
+Pipeline performance analysis
+Artifact retention testing
+Pipeline concurrency observation

@@ -419,3 +419,18 @@ Lab instructions are delivered as interactive HTML widgets with the following sp
 - Steps separated by comments inside one single terminal block
 - Color legend shown once at the top
 - Concept explanation in Spanish first, English second
+- After any file modification step, two validation sub-steps must be included
+  before the next git commit:
+
+  1. Content validation — confirm the file is correct:
+     - grep -n to verify additions are present
+     - grep -n ... || echo "OK" to verify deletions are gone
+     - syntax check when applicable (YAML, JSON, bash -n)
+
+  2. Functional validation — execute the code and verify it produces
+     the expected result:
+     - bash scripts: run the script and check the output
+     - Dockerfiles: docker build and docker run
+     - shell functions: call the function and verify output
+     - when local execution is not possible (GitHub Actions workflows):
+       document explicitly why and what the expected CI result is

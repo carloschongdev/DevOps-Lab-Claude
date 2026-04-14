@@ -1,30 +1,39 @@
-Day: 27
+Day: 28
 Phase: CI/CD Hardening
 
 Objectives:
-Build Docker image twice and compare hashes.
-Inspect image layers and history between builds.
-Generate artifact checksum for integrity verification.
+Simulate an intentional pipeline failure in GitHub Actions.
+Analyze failure logs and recover the pipeline to its original state.
+Scan the repository and Docker image for vulnerabilities with Trivy.
+Simulate a CI cache archive and restore cycle.
 
 Tasks Completed:
-- Created reports/day27/ directory structure
-- Built Docker image twice with different tags (build-1, build-2)
-- Inspected image metadata with docker inspect and docker history
-- Compared image hashes with diff
-- Compared image layer history between both builds
-- Generated SHA-256 checksum of pipeline artifact
-- Committed 11 report files to repository
+- Created branch pipeline-failure-test
+- Added pipeline-failure-test trigger and Simulate failure step to workflow
+- Validated YAML syntax with python3 before committing
+- Pushed failure and confirmed conclusion=failure in GitHub Actions
+- Extracted run ID with gh run list --json and captured in shell variable
+- Downloaded failure logs with gh run view $FAILED_RUN_ID --log
+- Analyzed logs with grep for error, failed, exit keywords
+- Reverted workflow to original state and validated with diff
+- Merged pipeline-failure-test to main and deleted branch
+- Installed Trivy and scanned filesystem, Docker image, and Dockerfile
+- Filtered CRITICAL and HIGH vulnerabilities to separate report files
+- Created cache archive with tar and restored to cache/restore/
+- Committed 19 report files and cache artifacts
+- Created and pushed tag lab-day-28
 
 Challenges:
-hash-build1.txt and history-build1.txt captured empty or incomplete data.
-hash-diff.txt reports hashes differ despite same Dockerfile — expected
-behavior due to build timestamps embedded in image metadata.
+gh run view without explicit run ID fails in non-interactive mode.
+Fix: extract run ID with gh run list --json databaseId --jq and store in variable.
 
 Key Learnings:
-Docker builds are not byte-for-byte identical across runs due to timestamps.
-Image layer history shows all base image layers including nginx:alpine.
-SHA-256 checksum provides integrity verification for pipeline artifacts.
-Empty capture files indicate a command redirection issue to investigate.
+GitHub Actions workflows cannot be validated functionally without a remote runner.
+Content validation (grep, diff, python3 yaml) must precede every commit on file edits.
+Functional validation for workflows is confirmed via gh run list after push.
+Trivy scans reveal CVEs in base images even without application vulnerabilities.
+tar -czf and tar -xzf reproduce the cache save/restore pattern used in GitHub Actions.
+gh run view requires an explicit run ID when output is redirected to a file.
 
 Next Step:
-Day 28 — Pipeline Failure Simulation and recovery workflow.
+Day 29 — Pipeline Recovery Metrics and artifact lifecycle management.
